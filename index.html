@@ -1023,41 +1023,72 @@
       </div>
     </div>
 
-    <form class="corporate-form" action="https://api.web3forms.com/submit" method="POST">
+    <!-- Added id="advisoryForm" so the JavaScript can manage it smoothly -->
+    <form class="corporate-form" id="advisoryForm" method="POST">
       
-      <!-- Your unique Web3Forms Access Key -->
+      <!-- Your live Web3Forms Access Key -->
       <input type="hidden" name="access_key" value="69d583a6-231d-4eee-9c83-56e0d38b7a0d">
       
       <!-- Customizes your email inbox subject line -->
       <input type="hidden" name="subject" value="New Client Advisory Briefing Request">
-      
-      <!-- OPTIONAL: Automatically sends clients back to your homepage after they submit -->
-      <input type="hidden" name="redirect" value="https://aaadvisorypartners.com">
 
       <div class="form-group">
         <label class="form-label">Company Name</label>
         <input type="text" name="company_name" placeholder="e.g., Enterprise Ltd" required>
       </div>
+      
       <div class="form-group">
         <label class="form-label">Contact Person</label>
         <input type="text" name="contact_person" placeholder="Full Name" required>
       </div>
+      
       <div class="form-group">
         <label class="form-label">Email Address</label>
         <input type="email" name="email" placeholder="name@company.com" required>
-        <div class="form-group">
-        <label class="form-label">CONTACT</label>
-        <input type="numbers" name="email" placeholder="Phone Number" required>
       </div>
+
+      <!-- Fixed: Properly separated from the email div, updated type and name attributes -->
+      <div class="form-group">
+        <label class="form-label">CONTACT</label>
+        <input type="text" name="phone_number" placeholder="Phone Number" required>
+      </div>
+      
       <div class="form-group">
         <label class="form-label">Scope of Interest</label>
         <input type="text" name="scope_of_interest" placeholder="How may we assist your business?">
       </div>
+      
       <button type="submit" class="hero-cta" style="width: 100%; margin-top: 10px;">Submit Briefing Request →</button>
     </form>
   </div>
 </section>
 
+<!-- This script intercepts the submit, delivers it to Web3Forms, and fires your alert -->
+<script>
+  document.getElementById('advisoryForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    
+    // Submits quietly to Web3Forms in the background
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => {
+      if (response.ok) {
+        // Shows your custom confirmation alert instantly
+        alert('Briefing submission received. Our advisory team will reach out within 2 business hours.');
+        document.getElementById('advisoryForm').reset(); // Clears out the form fields
+      } else {
+        alert('Something went wrong. Please try again or email us directly.');
+      }
+    })
+    .catch(error => {
+      alert('Connection error. Please check your network and try again.');
+    });
+  });
+</script>
 
 <footer>
   <div class="footer-left">
