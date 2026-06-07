@@ -144,6 +144,7 @@
   .hero-cta {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 12px;
     background: var(--gold);
     color: var(--navy);
@@ -155,6 +156,8 @@
     text-decoration: none;
     transition: background 0.2s;
     width: fit-content;
+    border: none;
+    cursor: pointer;
   }
   .hero-cta:hover { background: var(--gold-light); }
   .hero-cta-arrow { font-size: 18px; }
@@ -358,15 +361,14 @@
   .services-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
+    gap: 24px;
     margin-top: 60px;
   }
 
   .service-block {
     background: var(--white);
     padding: 44px 36px;
+    border: 1px solid var(--border);
   }
   .service-block-num {
     font-size: 11px;
@@ -619,7 +621,7 @@
     font-family: var(--sans);
     font-size: 14px;
     color: var(--text-dark);
-    transition: border-color 0.2s;
+    transition: border-color 0.2s, background-color 0.2s;
     width: 100%;
   }
   .corporate-form input:focus, .corporate-form textarea:focus {
@@ -759,7 +761,7 @@
     <div class="philosophy-grid">
       <div class="philosophy-text">
         <blockquote class="big-quote">
-          "A single missed SSNIT deadline or misfiled VAT return can cost a business more than an entire year of professional fees."
+          "A single missed SSNIT framework deadline or misfiled VAT return can cost a business more than an entire year of professional fees."
         </blockquote>
         <p>Ghana's regulatory environment is dense and constantly evolving. Between GRA filing cycles, SSNIT contribution schedules, GIPC requirements, and PPA certification renewals, compliance is a full-time occupation — one that pulls your team away from the work that actually grows revenue.</p>
         <p>We absorb that burden entirely. You get real-time financial visibility, zero-tolerance compliance, and a dedicated advisory relationship — without the overhead of an in-house finance function.</p>
@@ -778,7 +780,7 @@
           <div class="pillar-icon">✓</div>
           <div>
             <div class="pillar-item-title">Zero-tolerance compliance</div>
-            <div class="pillar-item-body">We track every deadline across GRA, SSNIT, and the Registrar-General's Department so penalties are eliminated by design.</div>
+            <div class="pillar-item-body">We track every filing target across GRA, SSNIT, and the Registrar-General's Department so penalties are eliminated by design.</div>
           </div>
         </li>
         <li class="pillar-item">
@@ -824,7 +826,7 @@
       <div class="service-block">
         <span class="service-block-num">02 — Tax Services</span>
         <h3 class="service-block-title">Compliance Without Compromise</h3>
-        <p class="service-block-desc">We manage every filing cycle and payment deadline so your tax affairs are always current — and strategically optimised.</p>
+        <p class="service-block-desc">We manage every filing cycle and payment target so your tax affairs are always current — and strategically optimised.</p>
         <ul class="service-items">
           <li class="service-item">Payroll preparation & statutory deductions</li>
           <li class="service-item">PAYE monthly filing & remittance</li>
@@ -979,7 +981,6 @@
             <li class="service-item">Daily bookkeeping & continuous general ledger upkeep</li>
             <li class="service-item">Monthly management accounts & cash flow dashboards</li>
             <li class="service-item">Full audit preparation & direct representation with GRA/SSNIT</li>
-            <li class="service-item">Priority strategic advisory sessions with your partner</li>
           </ul>
         </div>
         <a href="#contact" class="hero-cta" style="padding: 12px 24px; font-size: 13px; width: 100%; text-align: center; justify-content: center; margin-bottom: 0;">Inquire About Package</a>
@@ -987,17 +988,17 @@
 
       <div class="service-block" style="border: 1px solid var(--border); display: flex; flex-direction: column; justify-content: space-between;">
         <div>
-          <span class="service-block-num">03 — Focused Mandates</span>
-          <h3 class="service-block-title">Project-Based Consultations</h3>
-          <p class="service-block-desc">Targeted structural interventions for specific corporate milestones, regulatory cleanups, or entity onboarding.</p>
+          <span class="service-block-num">03 — Enterprise Scale</span>
+          <h3 class="service-block-title">Corporate Growth Partner</h3>
+          <p class="service-block-desc">Custom advisory blueprint for international companies, multi-branch operations, and high-volume firms.</p>
           <ul class="service-items" style="margin-bottom: 30px;">
-            <li class="service-item">Company registration & GIPC setup for foreign investors</li>
-            <li class="service-item">Expatriate work permit & residency immigration pipelines</li>
-            <li class="service-item">Multi-year retroactive tax health checks & cleanups</li>
-            <li class="service-item">PPA Certification & formal government tender readiness</li>
+            <li class="service-item"><strong>Everything in Full-Service package plus:</strong></li>
+            <li class="service-item">GIPC investor tracking, compliance & annual reporting</li>
+            <li class="service-item">Expatriate workforce processing (Work/Residency permits)</li>
+            <li class="service-item">PPA Certification cycles & custom tender support</li>
           </ul>
         </div>
-        <a href="#contact" class="hero-cta" style="padding: 12px 24px; font-size: 13px; width: 100%; text-align: center; justify-content: center; margin-bottom: 0;">Request a Quote</a>
+        <a href="#contact" class="hero-cta" style="padding: 12px 24px; font-size: 13px; width: 100%; text-align: center; justify-content: center; margin-bottom: 0;">Request Bespoke Proposal</a>
       </div>
 
     </div>
@@ -1005,40 +1006,54 @@
 </section>
 
 
-<section class="cta-section" id="contact">
+<section id="contact" class="cta-section">
   <div class="cta-inner">
     <div>
-      <h2 class="cta-headline">Let's align your financial strategy.</h2>
-      <p class="cta-sub">Secure a high-performance financial infrastructure for your enterprise.</p>
-      
+      <h2 class="cta-headline">Secure your corporate standing.</h2>
+      <p class="cta-sub">Outsource your complex timelines to seasoned professionals. Let’s map out a modern, institutional approach to your financial records.</p>
       <div class="cta-contacts">
         <div class="contact-row">
-          <span class="contact-type">Direct Line</span>
-          <span class="contact-value">+233 (0) XX XXX XXXX</span>
+          <span class="contact-type">Direct Consultations</span>
+          <span class="contact-value">info@aaadvisorypartners.com</span>
         </div>
         <div class="contact-row">
-          <span class="contact-type">Email Communications</span>
-          <span class="contact-value">advisory@yourfirm.com</span>
+          <span class="contact-type">DIRECT LINE</span>
+          <span class="contact-value">+233 (0) XX XXX XXXX</span>
         </div>
       </div>
     </div>
 
-    <form class="corporate-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Briefing submission received. Our advisory team will reach out within 2 business hours.');">
+    <form class="corporate-form" action="https://api.web3forms.com/submit" method="POST">
+      
+      <!-- Your unique Web3Forms Access Key -->
+      <input type="hidden" name="access_key" value="69d583a6-231d-4eee-9c83-56e0d38b7a0d">
+      
+      <!-- Customizes your email inbox subject line -->
+      <input type="hidden" name="subject" value="New Client Advisory Briefing Request">
+      
+      <!-- OPTIONAL: Automatically sends clients back to your homepage after they submit -->
+      <input type="hidden" name="redirect" value="https://aaadvisorypartners.com">
+
       <div class="form-group">
-        <label class="form-label">Company Name / Principal</label>
-        <input type="text" placeholder="e.g., Enterprise Ltd / John Doe" required>
+        <label class="form-label">Company Name</label>
+        <input type="text" name="company_name" placeholder="e.g., Enterprise Ltd" required>
       </div>
       <div class="form-group">
-        <label class="form-label">Corporate Email</label>
-        <input type="email" placeholder="you@company.com" required>
+        <label class="form-label">Contact Person</label>
+        <input type="text" name="contact_person" placeholder="Full Name" required>
       </div>
       <div class="form-group">
-        <label class="form-label">Primary Requirement</label>
-        <textarea rows="4" placeholder="How can we assist your enterprise? (e.g., Full Outsourced Retainer, Multi-year GRA Tax Cleanup, GIPC Incorporation setup)" required></textarea>
+        <label class="form-label">Email Address</label>
+        <input type="email" name="email" placeholder="name@company.com" required>
+        <div class="form-group">
+        <label class="form-label">CONTACT</label>
+        <input type="numbers" name="email" placeholder="Phone Number" required>
       </div>
-      <button type="submit" class="hero-cta" style="border: none; cursor: pointer; width: 100%; justify-content: center; padding: 14px;">
-        Submit Briefing Request
-      </button>
+      <div class="form-group">
+        <label class="form-label">Scope of Interest</label>
+        <input type="text" name="scope_of_interest" placeholder="How may we assist your business?">
+      </div>
+      <button type="submit" class="hero-cta" style="width: 100%; margin-top: 10px;">Submit Briefing Request →</button>
     </form>
   </div>
 </section>
@@ -1046,10 +1061,10 @@
 
 <footer>
   <div class="footer-left">
-    &copy; Professional Financial & Tax Advisory. All rights reserved.
+    &copy; 2026 AA Professional Accounting & Advisory Services. All rights reserved.
   </div>
   <div class="footer-tag">
-    Accra, Ghana
+    Precision • Compliance • Growth
   </div>
 </footer>
 
